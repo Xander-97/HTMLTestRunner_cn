@@ -975,12 +975,12 @@ class HTMLTestRunner(Template_mixin):
         self.generateReport(result)
         if PY3K:
             # for python3
-            # print('\nTime Elapsed: %s' % (self.stopTime - self.startTime),file=sys.stderr)
-            output = '\nTime Elapsed: %s' % (self.stopTime - self.startTime)
+            # print('\nTime Elapsed: %s\n' % (self.stopTime - self.startTime),file=sys.stderr)
+            output = '\nTime Elapsed: %s\n' % (self.stopTime - self.startTime)
             sys.stderr.write(output)
         else:
             # for python2
-            print >> sys.stderr, '\nTime Elapsed: %s' % (self.stopTime - self.startTime)
+            print >> sys.stderr, '\nTime Elapsed: %s\n' % (self.stopTime - self.startTime)
         return result
 
     def sortResult(self, result_list):
